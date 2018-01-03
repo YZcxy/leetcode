@@ -13,6 +13,11 @@ import java.util.Queue;
  *
  * 翻译：给一个二叉树，找到二叉树的最小深度。
  */
+
+/**
+ * 逻辑概述：
+ * 通过层序遍历，找到一个没有孩子节点的子节点就结束。
+ */
 public class No1 {
     public int run(TreeNode root) {
         int result = 0;

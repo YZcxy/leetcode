@@ -10,6 +10,11 @@ import java.util.Stack;
  *
  * 逆波兰记法，求出逆波兰表示法的值，不清楚逆波兰表示法的请百度
  */
+
+/**
+ * 逻辑概述：
+ * 通过栈来存储运算数字，遇到运算符就抛两个值出来运算。
+ */
 public class No2 {
     public int evalRPN(String[] tokens) {
         int result = 0;
@@ -29,6 +34,9 @@ public class No2 {
         return stack.pop();
     }
 
+    /**
+     * 传递运算符进行运算
+     */
     private int evaluate(int temp1, int temp2, char operator) {
         switch (operator) {
             case '+':
